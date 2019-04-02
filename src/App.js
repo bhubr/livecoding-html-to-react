@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react';
+import {
+  Container,
+  Row
+} from 'reactstrap';
 import Header from './components/Header';
-import Navbar from './components/Navbar';
+import MyNavbar from './components/MyNavbar';
 import ArticleCard from './components/ArticleCard';
 import articleList from './articles';
 import './App.css';
@@ -9,9 +13,9 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <div className="container">
+        <Container>
           <Header />
-          <Navbar />
+          <MyNavbar />
     
           <div className="jumbotron p-4 p-md-5 text-white rounded bg-dark">
             <div className="col-md-6 px-0">
@@ -21,7 +25,7 @@ class App extends Component {
             </div>
           </div>
             
-          <div className="row mb-2">
+          <Row className="mb-2">
             {
               articleList.map((singleArticle) => (
                 <ArticleCard
@@ -33,8 +37,8 @@ class App extends Component {
                 />
               ))
             }
-          </div>
-        </div>
+          </Row>
+        </Container>
     
     <main role="main" className="container">
       <div className="row">

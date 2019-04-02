@@ -1,7 +1,8 @@
 import React from 'react';
+import { Col } from 'reactstrap';
 
 const ArticleCard = props => (
-  <div className="col-md-6">
+  <Col lg={4} md={6} sm={12}>
     <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
       <div className="col p-4 d-flex flex-column position-static">
         <strong className="d-inline-block mb-2 text-primary">{props.category}</strong>
@@ -14,7 +15,7 @@ const ArticleCard = props => (
         <svg className="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
       </div>
     </div>
-  </div>
+  </Col>
 );
 
 export default ArticleCard;
